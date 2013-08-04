@@ -1,0 +1,109 @@
+
+
+
+/*
+	Global Variables
+---------------------------*/
+support-for-ie ?= true
+
+//colors
+medToDarkGrey = #58595b
+baseText = #333
+lightGrey = #999
+lighterGrey = #dedede
+offWhite = #f8f8f8
+medGrey = #737373
+baseOrange = #f2a700
+basePeach = #ffe1a5
+baseBabyBlue = #9bddf0
+
+
+baseFontSize = 12
+baseLineGrid = 16
+siteWidth = 1024px
+contentWidth = 944px
+bannerWidth = 1400px
+
+
+
+
+
+
+/*
+	Generic helper mixins
+---------------------------*/
+opacity(n)
+	opacity n
+	if support-for-ie
+		-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')"')
+
+
+border-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
+
+/*Shit quick fix. NEEDS REWORKING*/
+box-shadow(value)
+	if value = 'none'
+		-webkit-box-shadow none 
+		-moz-box-shadow inset none
+		box-shadow none
+	else
+		-webkit-box-shadow inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+		-moz-box-shadow inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+		box-shadow inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+
+
+// Font-size using rem with fallback
+// Use px to define font size.
+// This will calculate rem value for you.
+// Calulate line height based on baseline grid
+fontSize(n)
+	font-size: n
+	if unit(n) is 'px'
+		pxSize = remove-unit(n)
+		font-size: (pxSize / 12) rem
+		if pxSize < baseLineGrid
+			lineHeight = (baseLineGrid / pxSize)
+		if pxSize >= baseLineGrid && pxSize < (baseLineGrid*2)
+			lineHeight = (baseLineGrid*2 / pxSize)
+		if pxSize >= baseLineGrid*2
+			lineHeight = (baseLineGrid*3 / pxSize)
+		line-height: lineHeight
+
+
+box-sizing()
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	-ms-box-sizing: border-box
+	box-sizing: border-box
+	-moz-background-clip: padding-box !important
+	-webkit-background-clip: padding-box !important
+	-ms-background-clip: padding-box !important
+	background-clip: padding-box !important
+
+inline-block()
+	display inline-block
+	*display inline
+	vertical-align top
+	zoom 1
+
+
+/*
+		=>  Transitions
+----------------------------------------*/
+transAll($duration = 0.2s) 
+	-webkit-transition all $duration ease-in
+	-moz-transition all $duration ease-in
+	-o-transition all $duration ease-in
+	transition all $duration ease-in
+
+trans($prop, $duration = 0.5s, $easing = ease-in) 
+	-webkit-transition $prop $duration $easing
+	-moz-transition $prop $duration $easing
+	-o-transition $prop $duration $easing
+	transition $prop $duration $easing
+
+
+

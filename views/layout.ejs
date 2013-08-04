@@ -1,0 +1,45 @@
+<!doctype html>  
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+
+        <meta property="og:title" content="Stephen Zsolnai Web Developer"/>
+        <meta property="og:site_name" content="zolla.co.uk" /> 
+        <meta id="PageUrl" property="og:url" content="http://www.zolla.co.uk/"></meta>
+        <meta id="OgImage" property="og:image" content="http://www.zolla.co.uk/images/logox2.png"></meta>
+        <meta property="og:type" content="website" />
+        <meta id="OgDescription" property="og:description" content="Stephen Zsolnai is a web developer specialising in front-end technologies. Based in London, United Kingdom"></meta>
+
+
+        <meta name="description" content="Stephen Zsolnai is a web developer specialising in front-end technologies. Based in London, United Kingdom">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="css/core.css">
+        <script src="/lib/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <!--[if IE 7]>
+
+                <script src="/lib/lte-ie7.js"></script>
+                <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <![endif]-->
+            <%-partial('partials/partial-header') %>
+            <div id="main" role="main">
+                <%- body %>
+            </div> <!-- End of main -->
+
+            <%-partial('partials/partial-footer') %>
+        </div>
+    <%-partial('partials/partial-scriptrefs') %>
+
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+/*
+		All navigation and lists
+*/
+.nav
+	ul
+		padding 0
+		margin 0
+		li
+			padding 0
+			margin 0
+			list-style none
+			&.nav-parent
+				float left
+				.nav-parent-title
+					text-decoration none
+					color lightGrey 
+					fontSize(13px)
+					font-weight bold
+					display block
+					padding 4px 32px 10px 32px
+					position relative
+					border-right 1px solid offWhite
+					.ico
+						position absolute
+						top 4px
+						right 8px
+						fontSize(10px)
+						color baseOrange
+						padding-left:8px
+				&.selected,
+				&:hover
+					.nav-parent-title
+						border-bottom 4px solid basePeach
+						color baseText
+				.no-touch &:hover
+					.nav-dropdown
+						display block
+

@@ -1,0 +1,299 @@
+
+/*
+		brand.css
+		=================================
+		These styles are used to set basic elements to fit to a brand.
+		It should be able to be added to a page no matter what the media type 
+		to set the brand.
+		It must not contain layout styles [ie margins,position,padding,display]. 
+		It would be used for colors, text, fonts
+		It should not contain ids, only elements and classes
+		
+		- Document Elements
+		- links
+		- paragraphs 
+		- headers 
+		- lists 
+		- tables
+		- forms 
+
+*/
+
+
+/* ==========================================================================
+	 Base styles opinionated defaults
+	 ========================================================================== */
+html
+	//font-size 62.5% //10px
+	//font-size 68.8% 11px
+	font-size 75% //12px
+	//font-size 81.3% 13px
+	//font-size 87.5% 14px
+	line-height 1.3334
+body, select, input, textarea
+	font-family Arial, Helvetica, "Nimbus Sans L", "Free Sans", Sans-Serif
+
+body
+	color baseText
+
+body.acc-med
+	font-size 85%
+
+body.acc-large
+	font-size 100%
+
+
+/*
+ * Remove text-shadow in selection highlight h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection
+	background baseOrange
+	text-shadow none
+	color #fff
+
+::selection
+	background baseOrange
+	text-shadow none
+	color #fff
+
+img
+	vertical-align middle
+
+
+label, input[type=button], input[type=submit], button
+	cursor pointer
+
+button, input, select, textarea
+	margin 0
+
+button
+	width auto
+	overflow visible
+
+a
+	outline none
+
+a:focus
+	outline thin dotted
+
+a:active, a:hover
+	outline 0
+
+a
+	color medGrey
+	text-decoration none
+
+a:visited
+	color medGrey
+
+a:hover, a:active
+	text-decoration underline
+	color baseText
+
+a:focus
+
+a img
+	border none
+
+a:link
+	-webkit-tap-highlight-color baseOrange
+
+abbr[title]
+	border-bottom 1px dotted
+
+address
+	margin-bottom 16px
+
+blockquote
+	width 55%
+	padding 8px 0 0 0
+	border-top 1px solid lighterGrey
+	margin 8px 16px 8px 0
+	float left
+	border-bottom 1px solid lighterGrey
+	fontSize(16px)
+	line-height 1.5
+	font-weight: bold
+
+form
+	margin 0
+	padding 0
+	
+q
+	quotes none
+
+q:before, q:after
+	content none
+
+img
+	border 0
+	-ms-interpolation-mode bicubic
+	vertical-align middle
+
+pre
+	padding 16px
+	white-space pre-line
+	word-wrap break-word
+
+b, strong
+	font-weight bold
+
+em
+	font-weight normal
+
+small
+	font-size 85%
+
+pre, code, 
+kbd, samp
+	font-family monospace, sans-serif
+
+sub, sup
+	font-size 75%
+	line-height 0
+	position relative
+	vertical-align baseline
+
+sup
+	top -0.5em
+
+sub
+	bottom -0.25em
+
+p
+	margin 0 0 8px 0
+	padding 0
+
+p+p
+
+p:first-child
+
+p:last-child
+	margin-bottom 0
+
+h1,h2,h3,h4,h5,h6
+	font-weight bold
+	text-rendering optimizeLegibility
+	padding 0
+
+h1
+	fontSize(17px)
+	color baseText
+	margin 0
+	position relative
+	top -2px
+
+h2
+	fontSize(12px)
+	margin 0
+	color baseText
+	position relative
+	top -2px
+
+h3
+	fontSize(12px)
+	color lightGrey
+
+
+h4
+
+h5
+
+h6
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child
+	margin-top 0
+
+h2 strong,
+h3 strong
+
+dl
+	padding 0 0 16px
+
+dl:after
+	content "."
+	display block
+	height 0
+	clear both
+	visibility hidden
+
+dt
+	clear left
+	display inline-block
+	float left
+	font-weight bold
+	padding 0 10px 0 0
+	width 115px
+
+dd
+	float left
+	width 200px
+	*float none
+ul
+	list-style none
+li,
+ol
+	padding 0 0 8px 0
+
+ol ol
+	padding-top 0
+
+ul
+	padding 0 0 16px 0
+
+ul ul
+	padding-top 0
+
+p+ul, p+ol
+	padding-top 0
+
+table
+	font-size inherit
+	font 100%
+	margin 0
+	width 100%
+
+table caption
+	background #4e4e4e
+	color #fff
+	font-size 1.1em
+	font-weight bold
+	text-align left
+
+table caption span
+	display block
+	padding 10px 10px 8px
+	position relative
+
+table caption .aside
+	position absolute
+	top 0
+	right 0
+
+tr
+
+th
+	border solid 1px #c1c1c1
+	padding 8px 3px 7px
+	text-align center
+
+td
+	border solid 1px #c1c1c1
+	padding 8px 3px 7px
+	text-align center
+
+tr:nth-child(odd) td
+	background #e6e7e8
+
+.ie6 tr.odd td,
+.ie7 tr.odd td,
+.ie8 tr.odd td
+	background #e6e7e8
+
