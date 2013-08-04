@@ -6,7 +6,7 @@ var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path')
-  , port = 2001;
+  , port = 5000;
 
 var app = express();
 
